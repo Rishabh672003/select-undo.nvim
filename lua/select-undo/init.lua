@@ -300,20 +300,6 @@ function M.setup(opts)
             desc = "Selective undo for character selection"
         })
     end
-
-  vim.keymap.set("n","<C-s>u",function()
-    local line_nr = vim.api.nvim_win_get_cursor(0)[1]
-    vim.cmd(line_nr .. 'undo')
-  end
-  )
-     
-   vim.keymap.set("n", "<Leader>h", function()
-      if opts.name then
-         print("hello, " .. opts.name)
-      else
-         print("hello")
-      end
-   end)
 end
 
 return M
